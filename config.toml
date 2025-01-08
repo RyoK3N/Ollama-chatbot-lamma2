@@ -1,0 +1,42 @@
+[model]
+name = "llama2"
+base_url = "http://127.0.0.1:11434"
+temperature = 0.7
+max_tokens = 2000
+top_p = 0.95
+repeat_penalty = 1.1
+
+[server]
+host = "127.0.0.1"
+port = 11434
+timeout = 300  # 5 minutes in seconds
+
+[system]
+# Default system prompt for the model
+prompt = """You are a helpful AI assistant. You aim to provide accurate, 
+clear, and concise responses while being friendly and professional."""
+
+[logging]
+level = "INFO"
+file = "chatbot.log"
+format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+[cache]
+enabled = true
+directory = ".cache"
+max_size = 1024  # MB
+
+[api]
+request_timeout = 60
+retry_attempts = 3
+retry_delay = 1
+
+[environment]
+LANGCHAIN_TRACING_V2="true"
+LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
+LANGCHAIN_API_KEY="your_api_key_here"
+LANGCHAIN_PROJECT="chatbot"
+
+[system-env]
+conda create -n chatbot python=3.10
+conda activate chatbot
