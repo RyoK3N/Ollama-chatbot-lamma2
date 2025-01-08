@@ -1,8 +1,11 @@
 .PHONY: setup install start pull-model run clean
 
 setup:
-	conda create -n chatbot python=3.10
-	conda activate chatbot
+	conda create -n chatbot python=3.10 -y
+	@echo "Environment created. Please run the following commands manually:"
+	@echo "conda init"
+	@echo "conda activate chatbot"
+	@echo "make install"
 
 install:
 	brew install ollama

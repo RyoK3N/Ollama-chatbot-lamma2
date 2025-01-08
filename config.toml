@@ -32,11 +32,7 @@ retry_attempts = 3
 retry_delay = 1
 
 [environment]
-LANGCHAIN_TRACING_V2="true"
-LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
-LANGCHAIN_API_KEY="your_api_key_here"
-LANGCHAIN_PROJECT="chatbot"
-
-[system-env]
-conda create -n chatbot python=3.10
-conda activate chatbot
+LANGCHAIN_TRACING_V2 = "true"
+LANGCHAIN_ENDPOINT = "https://api.smith.langchain.com"
+LANGCHAIN_API_KEY = "your_api_key_here"
+LANGCHAIN_PROJECT = "chatbot"
