@@ -24,7 +24,7 @@ A modern chatbot implementation using Ollama's Llama2 model with both terminal a
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
+git clone (https://github.com/RyoK3N/Ollama-chatbot-lamma2)
 cd Ollama-chatbot-lamma2
 ```
 
